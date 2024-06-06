@@ -76,7 +76,7 @@ fun BottomNavigate() {
 @Composable
 fun AppBottomNavigation(
     navController: NavHostController,
-    bottomNavigationItems: List<BottomScreen>
+    bottomNavigationItems: List<BottomScreen>,
 ) {
     BottomNavigation {
         bottomNavigationItems.forEach { screen ->
@@ -92,7 +92,7 @@ fun AppBottomNavigation(
                 selected = false,
                 alwaysShowLabel = false,
                 onClick = {
-                    when(screen.route) {
+                    when (screen.route) {
                         "Home" -> navController.navigate(BottomScreen.Home.route)
                         "Favourite" -> navController.navigate(BottomScreen.Favourite.route)
                         "Search" -> navController.navigate(BottomScreen.Search.route)
